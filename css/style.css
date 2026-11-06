@@ -43,7 +43,7 @@ img{max-width:100%;height:auto;display:block}
 .btn-primary:hover{background:var(--scarlet-dark);text-decoration:none}
 .btn-ghost{border:1px solid #9E9E9E;color:var(--ink)}
 .btn-ghost:hover{border-color:var(--scarlet);color:var(--scarlet);text-decoration:none}
-.headshot{aspect-ratio:4/5;background:#EFEFEF;display:flex;align-items:center;justify-content:center;color:#6b6b6b;font-size:13px;letter-spacing:.1em;text-transform:uppercase;box-shadow:16px 16px 0 var(--rule)}
+.headshot{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;background:#EFEFEF;box-shadow:16px 16px 0 var(--rule)}
 
 /* Bands and cards */
 .band{background:var(--band);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
@@ -69,6 +69,11 @@ figure{margin:0}
 figure img{border:1px solid var(--rule)}
 figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .num{color:var(--scarlet);font-weight:700;margin-right:6px}
+
+/* About */
+.about-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,380px);gap:48px;align-items:start}
+.about-intro .prose{max-width:none}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;border:0}
 
 /* Lists */
 .cite-list{list-style:none;margin:0;padding:0;max-width:900px}
@@ -98,7 +103,7 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 @media (max-width:860px){
   .hero{grid-template-columns:1fr;gap:40px;padding-top:48px}
   .hero h1{font-size:38px}
-  .principle.with-fig{grid-template-columns:1fr}
+  .principle.with-fig,.about-intro{grid-template-columns:1fr}
   .timeline li{grid-template-columns:1fr;gap:2px}
   .page-head h1{font-size:34px}
   .site-header{position:static}
