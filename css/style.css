@@ -74,6 +74,12 @@ h3{margin:32px 0 10px;font-size:19px;font-weight:700}
 figure{margin:0}
 figure img{border:1px solid var(--rule)}
 figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.fig-band{background:var(--band);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:16px 0 8px}
+.fig-band figure{max-width:900px;margin:0 auto;padding:40px 32px 32px}
+.fig-band img{display:block;width:100%;height:auto;background:#fff;border:0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.fig-band figcaption{text-align:center;margin-top:12px}
+.content.cont{padding-top:8px}
+.content:has(+ .fig-band){padding-bottom:16px}
 .num{color:var(--scarlet);font-weight:700;margin-right:6px}
 
 /* About */
