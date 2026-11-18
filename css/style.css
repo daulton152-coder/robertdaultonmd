@@ -135,13 +135,15 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .journey-title{margin:0 0 28px;text-align:center;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .journey-line{list-style:none;margin:0;padding:0;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;position:relative}
 .journey-line::before{content:"";position:absolute;left:4%;right:4%;top:86px;height:2px;background:var(--rule)}
-.journey-line li{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 1 auto;position:relative}
+.journey-line li{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 1 auto;min-width:0;position:relative}
+.journey-line li .tl-logo img{flex-shrink:1;min-width:0;object-fit:contain}
 .tl-logo{height:72px;display:flex;align-items:center;justify-content:center;gap:20px}
 .tl-logo img{width:auto;max-width:100%;display:block}
 .tl-group{border:1px solid var(--rule);border-radius:8px;padding:0 18px;background:#fff}
 .tl-dot{width:12px;height:12px;border-radius:50%;background:var(--scarlet);border:3px solid #fff;box-shadow:0 0 0 1px var(--rule);position:relative;z-index:1}
 .tl-date{font-size:13px;color:var(--muted);text-align:center;white-space:nowrap}
-@media (max-width:900px){
+@media (max-width:960px) and (min-width:761px){.tl-date{white-space:normal;max-width:96px;font-size:12px}}
+@media (max-width:760px){
   .journey-line{flex-direction:column;align-items:stretch;gap:28px;padding-left:28px}
   .journey-line::before{left:7px;right:auto;top:6px;bottom:6px;width:2px;height:auto}
   .journey-line li{align-items:flex-start;gap:8px}
